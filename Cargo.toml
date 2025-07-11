@@ -1,6 +1,36 @@
 [package]
 name = "loneboth_ai"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+description = "A comprehensive AI framework for algorithm coordination and GPU-accelerated machine learning"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/nanaisisi/loneboth_ai"
+keywords = ["ai", "machine-learning", "gpu", "onnx", "coordination"]
+categories = ["science", "algorithms"]
+
+[[bin]]
+name = "loneboth_ai"
+path = "src/main.rs"
+
+[lib]
+name = "loneboth_ai"
+path = "src/lib.rs"
 
 [dependencies]
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+log = "0.4"
+env_logger = "0.10"
+futures = "0.3"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[features]
+default = ["gpu"]
+gpu = []
+onnx = []
+directml = []
