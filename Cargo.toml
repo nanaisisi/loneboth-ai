@@ -19,3 +19,28 @@ name = "loneboth_ai"
 path = "src/main.rs"
 
 [dependencies]
+# Burn framework for ML training and inference
+burn = { version = "0.18.0", features = ["train", "std", "candle", "wgpu"] }
+burn-candle = "0.18.0"
+burn-wgpu = "0.18.0"
+burn-dataset = "0.18.0"
+burn-train = "0.18.0"
+burn-core = "0.18.0"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Metrics and monitoring
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Random number generation
+rand = "0.8"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
