@@ -1,3 +1,5 @@
+# AI 生成です。
+
 # Loneboth AI Framework
 
 A comprehensive AI framework for individual and group coordination with support for static and dynamic algorithms, GPU acceleration, and consistency verification.
