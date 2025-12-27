@@ -1,13 +1,13 @@
 //! Tests for the Loneboth AI framework
 
-use loneboth_ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
-use loneboth_ai::algorithms::{Algorithm, StaticAlgorithm, DynamicAlgorithm};
-use loneboth_ai::coordination::CoordinationSystem;
-use loneboth_ai::gpu::GpuAccelerator;
-use loneboth_ai::verification::ConsistencyVerifier;
+use loneboth-ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
+use loneboth-ai::algorithms::{Algorithm, StaticAlgorithm, DynamicAlgorithm};
+use loneboth-ai::coordination::CoordinationSystem;
+use loneboth-ai::gpu::GpuAccelerator;
+use loneboth-ai::verification::ConsistencyVerifier;
 
 #[test]
-fn test_loneboth_ai_creation() {
+fn test_loneboth-ai_creation() {
     let ai = LonebothAI::new();
     assert_eq!(ai.config().algorithm_type, AlgorithmType::Static);
     assert_eq!(ai.config().coordination_mode, CoordinationMode::Individual);
@@ -16,7 +16,7 @@ fn test_loneboth_ai_creation() {
 }
 
 #[test]
-fn test_loneboth_ai_with_config() {
+fn test_loneboth-ai_with_config() {
     let config = Config {
         gpu_enabled: false,
         coordination_mode: CoordinationMode::Group,

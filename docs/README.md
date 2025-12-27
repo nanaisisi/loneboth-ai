@@ -32,8 +32,8 @@ Loneboth AI is an AI framework designed for individual and group coordination wi
 ## Usage Examples
 
 ```rust
-use loneboth_ai::core::Engine;
-use loneboth_ai::algorithms::StaticAlgorithm;
+use loneboth-ai::core::Engine;
+use loneboth-ai::algorithms::StaticAlgorithm;
 
 let engine = Engine::new();
 let algorithm = StaticAlgorithm::new();
