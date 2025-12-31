@@ -193,7 +193,7 @@ pub type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
 ### Basic Usage
 
 ```rust
-use loneboth_ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
+use loneboth-ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
 
 // Create AI instance
 let ai = LonebothAI::new();
@@ -234,10 +234,10 @@ for algo_type in algorithms {
         algorithm_type: algo_type,
         ..Default::default()
     };
-    
+
     let ai = LonebothAI::with_config(config);
     let result = ai.process(&input)?;
-    
+
     println!("{:?} result: {:?}", algo_type, result);
 }
 ```

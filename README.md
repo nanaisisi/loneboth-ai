@@ -1,3 +1,5 @@
+# AI 生成です。
+
 # Loneboth AI Framework
 
 A comprehensive AI framework for individual and group coordination with support for static and dynamic algorithms, GPU acceleration, and consistency verification.
@@ -5,6 +7,7 @@ A comprehensive AI framework for individual and group coordination with support 
 ## Features
 
 ### Core Capabilities
+
 - **Multiple Algorithm Types**: Static (fixed), Dynamic (adaptive), Variable (configurable)
 - **Coordination Modes**: Individual, Group, and Hybrid processing
 - **GPU Acceleration**: ONNX Runtime and DirectML support
@@ -14,16 +17,19 @@ A comprehensive AI framework for individual and group coordination with support 
 ### Architecture Components
 
 1. **Algorithm Engine** (アルゴリズム定義)
+
    - Static algorithms (静的（固定）アルゴリズム)
    - Dynamic algorithms (動的（ファジー）アルゴリズム)
    - Variable algorithms (可変アルゴリズム)
 
 2. **Coordination System** (単体/群体協調)
+
    - Individual algorithm execution
    - Group coordination and consensus
    - Hybrid processing mode
 
 3. **GPU Acceleration** (GPU アクセラレーション)
+
    - ONNX Runtime integration
    - DirectML support for Windows
    - Automatic fallback to CPU
@@ -41,22 +47,22 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-loneboth_ai = "0.1.0"
+loneboth-ai = "0.1.0"
 ```
 
 ### Basic Usage
 
 ```rust
-use loneboth_ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
+use loneboth-ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Create AI instance with default configuration
     let ai = LonebothAI::new();
-    
+
     // Process input data
     let input = vec![1.0, 2.0, 3.0, 4.0, 5.0];
     let result = ai.process(&input)?;
-    
+
     println!("Result: {:?}", result);
     Ok(())
 }
@@ -106,16 +112,19 @@ cargo test
 ## Configuration Options
 
 ### Algorithm Types
+
 - **Static**: Pre-defined, high-performance algorithms
 - **Dynamic**: Adaptive algorithms with fuzzy logic
 - **Variable**: Runtime configurable algorithms
 
 ### Coordination Modes
+
 - **Individual**: Single algorithm execution
 - **Group**: Multi-algorithm coordination with consensus
 - **Hybrid**: Combined individual and group processing
 
 ### GPU Acceleration
+
 - **ONNX Runtime**: Cross-platform ML inference
 - **DirectML**: Windows hardware acceleration
 - **CPU Fallback**: Automatic when GPU unavailable

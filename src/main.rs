@@ -1,4 +1,4 @@
-use loneboth_ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
+use loneboth-ai::{LonebothAI, Config, CoordinationMode, AlgorithmType};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Loneboth AI Framework Demo");
